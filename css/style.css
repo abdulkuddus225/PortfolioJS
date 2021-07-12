@@ -1,0 +1,57 @@
+*{
+  font-family: fantasy;
+}
+
+.header h1{
+  color: darkblue;
+  font-size: 60px;
+  margin-bottom: 100px;
+  margin-top: 50px;
+    text-align: center;
+}
+
+
+.introduction{
+  margin-top: 50px;
+}
+
+.introduction h2{
+  color: darkblue;
+  font-size: 40px;
+  text-align: center;
+}
+
+.introduction p{
+
+  font-size: 20px;
+  text-align: center;
+}
+
+.about{
+  margin-top: 50px;
+}
+
+.about h2{
+    color: darkblue;
+  font-size: 40px;
+    text-align: center;
+}
+
+.about p{
+    font-size: 20px;
+      text-align: center;
+}
+
+.contact h2{
+     color: darkblue;
+  font-size: 40px;
+    text-align: center;
+}
+
+.gallery{
+  color: darkblue;
+  font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

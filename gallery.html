@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Gallery</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body onload="fetchData()">
+  <div class="container">
+  <div class="header">
+    <h1>Abdul Kuddus</h1>      
+  </div>  
+</div>
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="index.html">Abdul Kuddus</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="about.html">About Me</a>
+      <a class="nav-item nav-link" href="contact.html">Contact Me</a>
+      <a class="nav-item nav-link disabled" href="gallery.html">Gallery</a>
+    </div>
+  </div>
+</nav>
+</div>
+
+<div class="container">
+    <!-- Gallery -->
+      <h2 class="gallery">
+    Gallery
+  </h2>
+  <button type="button" id="addModal" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Add New Image
+  </button><br><br>
+<div id="galleryDisplay">
+</div>
+<!-- Gallery -->
+</div>
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add image</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="idHidden">
+        <label for="name">Image name</label><br>
+        <input type="text" id="name">
+        <p id="requiredName" style="color: red;"></p>
+        <label for="name">Image description</label><br>
+        <input type="text" id="description">
+        <p id="requiredDesc" style="color: red;"></p>
+        <label for="name">Image path</label><br>
+        <input type="text" id="path">
+        <p id="requiredPath" style="color: red;"></p>
+        <button type="button" onclick="submit()">Save </button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="js/images.js"></script>
+
+</body>
+</html>
