@@ -62,12 +62,11 @@
         <input type="text" id="description">
         <p id="requiredDesc" style="color: red;"></p>
         <label for="name">Image path</label><br>
-        <input type="text" id="path">
+        <input type="file" id="path">
         <p id="requiredPath" style="color: red;"></p>
-        <button type="button" onclick="submit()">Save </button>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="submit()">Add</button>
       </div>
     </div>
   </div>
