@@ -1,5 +1,5 @@
 
-var gallaryFiles = [];
+let gallaryFiles = [];
 
 async function fetchData() {
   let jsonData = insertData().then((data) => {
@@ -49,13 +49,13 @@ function process(params) {
     innerDiv.appendChild(span);
     innerDiv.appendChild(btn);
     div.appendChild(innerDiv);
- 
+
   });
 
   for (const iterator of galleryDisplay.children) {
     iterator.remove();
   }
-  galleryDisplay.appendChild(div); 
+  galleryDisplay.appendChild(div);
 }
 
 
@@ -69,15 +69,7 @@ function insertData() {
       })
   });
 }
-
-function deleted(num) {
-  console.log(imageData.gallery.pop());
-  console.log(imageData)
-}
-
 function edit(obj) {
-  console.log("edit", obj);
-  //  = obj.id
   const modal = document.getElementById('addModal');
   modal.click();
   const idHidden = document.getElementById('idHidden');
@@ -93,18 +85,18 @@ function submit(params) {
   let imageName = document.getElementById('name').value;
   let imagePath = document.getElementById('path').value;
   let imageDescription = document.getElementById('description').value;
-  if(imageName == ""){
-    document.getElementById("requiredName").innerHTML="Required!!";
+  if (imageName == "") {
+    document.getElementById("requiredName").innerHTML = "Required!!";
   }
-  else if(imagePath == ""){
-    document.getElementById("requiredPath").innerHTML="Required!!";
-   
+  else if (imagePath == "") {
+    document.getElementById("requiredPath").innerHTML = "Required!!";
+
   }
-  else if(imageDescription == ""){
-    
-    document.getElementById("requiredDesc").innerHTML="Required!!";
+  else if (imageDescription == "") {
+
+    document.getElementById("requiredDesc").innerHTML = "Required!!";
   }
-  else{
+  else {
     obj.name = document.getElementById('name').value;
     obj.description = document.getElementById('description').value;
     obj.image = document.getElementById('path').value;
@@ -122,9 +114,7 @@ function submit(params) {
 
 
 function deleteItem(id) {
-  console.log(gallaryFiles);
   const index = gallaryFiles.findIndex((g) => g.id == id);
-  console.log(index);
   if (index != -1) {
     gallaryFiles.splice(index, 1);
     process(gallaryFiles);
